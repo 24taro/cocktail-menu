@@ -187,6 +187,9 @@ body {
   font-size: 0.8em;
   font-weight: 400;
   color: #8b7355;
+  display: block;
+  margin-top: -8px;
+  line-height: 1.2;
 }
 
 .cocktail-list {
@@ -266,7 +269,7 @@ body {
 }
 
 .cocktail-ingredients.show {
-  max-height: 200px;
+  max-height: 800px;
   margin-top: 15px;
   padding: 15px;
 }
@@ -280,21 +283,91 @@ body {
   letter-spacing: 1px;
 }
 
-.ingredients-list {
-  list-style: none;
+.ingredients-visual {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
   gap: 8px;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.ingredients-list li {
+.ingredient-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(212, 165, 116, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 165, 116, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.ingredient-item:hover {
   background: rgba(212, 165, 116, 0.1);
+  border-color: rgba(212, 165, 116, 0.2);
+  transform: translateX(4px);
+}
+
+.ingredient-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.ingredient-icon img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(212, 165, 116, 0.2));
+}
+
+.ingredient-name {
+  font-weight: 700;
   color: #5c4a3a;
-  padding: 4px 12px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.plus-symbol {
+  color: #d4a574;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10px;
+  width: 100%;
+  margin: 4px 0;
+  border-radius: 8px;
+}
+
+.alcoholic {
+  position: relative;
+}
+
+.alcoholic::before {
+  content: "Alcoholic";
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #b48e5f;
+  color: white;
+  padding: 8px 20px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 400;
-  border: 1px solid rgba(212, 165, 116, 0.2);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.alcoholic .cocktail-item:hover {
+  border-left-color: #b48e5f;
+}
+
+.alcoholic .category-title {
+  color: #5c4a3a;
+  margin-top: 50px;
 }
 
 .non-alcoholic {

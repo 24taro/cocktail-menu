@@ -1,0 +1,15 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="tea-liquid" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#8d6e63;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#5d4037;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <ellipse cx="32" cy="45" rx="12" ry="3" fill="#6d4c41" opacity="0.3"/>
+    <ellipse cx="32" cy="43" rx="10" ry="2" fill="#8d6e63" stroke="#5d4037" stroke-width="1"/>
+    <ellipse cx="32" cy="42" rx="8" ry="1.5" fill="url(#tea-liquid)"/>
+    <path d="M 44 40 Q 50 38 52 42 Q 50 46 44 44" fill="none" stroke="#8d6e63" stroke-width="2"/>
+    <ellipse cx="32" cy="41" rx="2" ry="0.5" fill="#ffffff" opacity="0.3"/>
+    <ellipse cx="28" cy="41" rx="1" ry="0.3" fill="#a1887f" opacity="0.5"/>
+    <ellipse cx="36" cy="41" rx="0.8" ry="0.2" fill="#a1887f" opacity="0.4"/>
+</svg>

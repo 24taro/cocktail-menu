@@ -3,6 +3,40 @@ function createSvgIcon(type) {
   return `<img src="images/cocktails/nonalcoholic.svg" alt="${type} icon" />`;
 }
 
+// Function to get ingredient icon path
+function getIngredientIcon(ingredientName) {
+  const name = ingredientName.toLowerCase();
+  
+  // Map ingredient names to image files
+  if (name.includes("ウォッカ")) return "images/ingredients/vodka.svg";
+  if (name.includes("ジン") && !name.includes("ジンジャー")) return "images/ingredients/gin.svg";
+  if (name.includes("カンパリ")) return "images/ingredients/campari.svg";
+  if (name.includes("オレンジジュース")) return "images/ingredients/orange-juice.svg";
+  if (name.includes("カシスリキュール")) return "images/ingredients/cassis-liqueur.svg";
+  if (name.includes("トニックウォーター")) return "images/ingredients/tonic-water.svg";
+  if (name.includes("ソーダ")) return "images/ingredients/soda.svg";
+  if (name.includes("ライムジュース")) return "images/ingredients/lime-juice.svg";
+  if (name.includes("ライム")) return "images/ingredients/lime.svg";
+  if (name.includes("レモン")) return "images/ingredients/lemon.svg";
+  if (name.includes("チェリー")) return "images/ingredients/cherry.svg";
+  if (name.includes("グレープフルーツジュース")) return "images/ingredients/grapefruit-juice.svg";
+  if (name.includes("ジンジャービア")) return "images/ingredients/ginger-beer.svg";
+  if (name.includes("ジンジャーエール")) return "images/ingredients/ginger-ale.svg";
+  if (name.includes("白ワイン")) return "images/ingredients/white-wine.svg";
+  if (name.includes("赤ワイン")) return "images/ingredients/red-wine.svg";
+  if (name.includes("グレナデンシロップ")) return "images/ingredients/grenadine-syrup.svg";
+  if (name.includes("ウーロン茶")) return "images/ingredients/oolong-tea.svg";
+  if (name.includes("白ぶどうジュース")) return "images/ingredients/white-grape-juice.svg";
+  if (name.includes("赤ぶどうジュース")) return "images/ingredients/red-grape-juice.svg";
+  if (name.includes("トロピカルフルーツジュース")) return "images/ingredients/tropical-fruit-juice.svg";
+  if (name.includes("パッションフルーツジュース")) return "images/ingredients/passion-fruit-juice.svg";
+  if (name.includes("グリーンアップルジュース")) return "images/ingredients/green-apple-juice.svg";
+  if (name.includes("フルーツ")) return "images/ingredients/fruits.svg";
+  
+  // Default ingredient icon (can be a generic bottle or glass)
+  return "images/ingredients/soda.svg";
+}
+
 // Function to get specific cocktail icon path
 function getCocktailIcon(cocktailName) {
   const name = cocktailName.toLowerCase();
@@ -71,107 +105,107 @@ function getCocktailIcon(cocktailName) {
 const alcoholicCocktails = [
   {
     name: "ジントニック",
-    description: "爽やかなジンとトニック",
+    description: "英国紳士が何世代にも渡り愛し続ける時代を超えた永遠のクラシカル",
     ingredients: ["ジン", "トニックウォーター", "ライム"],
   },
   {
     name: "ジンバック",
-    description: "ジンとジンジャーエール",
+    description: "ジンジャーの繊細なスパイスが優雅に踊る洗練されたハーモニー",
     ingredients: ["ジン", "ジンジャーエール", "レモン"],
   },
   {
     name: "オレンジブロッサム",
-    description: "ジンとオレンジの調和",
+    description: "春の選しい陽だまりのように心を温める優雅な柑橘の調べ",
     ingredients: ["ジン", "オレンジジュース"],
   },
   {
     name: "ブルドックハイボール",
-    description: "ウォッカとグレープフルーツ",
+    description: "クリアなウォッカの力強さと苦甘いグレフルの魅惑的な誘惑",
     ingredients: ["ウォッカ", "グレープフルーツジュース"],
   },
   {
     name: "カンパリオレンジ",
-    description: "ビターとオレンジの絶品",
+    description: "地中海の陣しい陽光が織りなすビターとオレンジの絶妙なバランス",
     ingredients: ["カンパリ", "オレンジジュース"],
   },
   {
     name: "カンパリグレープフルーツ",
-    description: "ほろ苦さと酸味が絶品",
+    description: "大人の心をしっとり虜にする禁断のほろ苦く甘美な誘惑",
     ingredients: ["カンパリ", "グレープフルーツジュース"],
   },
   {
     name: "カンパリソーダ",
-    description: "シンプルで奥深い大人味",
+    description: "シンプルでミニマルな美学に秘められた深遠で奥深い味わい",
     ingredients: ["カンパリ", "ソーダ"],
   },
   {
     name: "カンパリトニック",
-    description: "カンパリとトニックの洗練",
+    description: "カンパリの繊細なビターと泡が奏でる洗練された大人の調べ",
     ingredients: ["カンパリ", "トニックウォーター"],
   },
   {
     name: "スプモーニ",
-    description: "三重奏が奏でる上品な一杯",
+    description: "地中海の美しくロマンチックな夕暮れを思わせる三つの味の協奏曲",
     ingredients: ["カンパリ", "グレープフルーツジュース", "トニックウォーター"],
   },
   {
     name: "カシスオレンジ",
-    description: "甘酸っぱい黄金コンビ",
+    description: "甘いカシスベリーとオレンジシトラスの魅惑的な黄金比",
     ingredients: ["カシスリキュール", "オレンジジュース"],
   },
   {
     name: "カシスグレープフルーツ",
-    description: "甘味と苦みが調和",
+    description: "甘美なカシスの誘惑とグレフルの苦い現実が織りなす絶妙な均衡",
     ingredients: ["カシスリキュール", "グレープフルーツジュース"],
   },
   {
     name: "カシスソーダ",
-    description: "シンプルで軽やかな味",
+    description: "シンプルでミニマルな美学に宿る軽やかで自由な魂",
     ingredients: ["カシスリキュール", "ソーダ"],
   },
   {
     name: "カシスウーロン",
-    description: "和の要素の創作カクテル",
+    description: "和と洋の異なる文化が美しく交差する独創的なカクテルアート",
     ingredients: ["カシスリキュール", "ウーロン茶"],
   },
   {
     name: "キール",
-    description: "白ワインベースの食前酒",
+    description: "フランス・ブルゴーニュの古き伝統に彩られた優雅な食前の儀式",
     ingredients: ["白ワイン", "カシスリキュール"],
   },
   {
     name: "カーディナル",
-    description: "濃厚で深い赤ワイン味",
+    description: "深い紅に染まるロマンティックで情熱的なワインの豊かな調べ",
     ingredients: ["赤ワイン", "カシスリキュール"],
   },
   {
     name: "ウォッカトニック",
-    description: "純粋でクリアな美味しさ",
+    description: "美しいクリスタルのように透明な魂に宿る純粋なエレガンス",
     ingredients: ["ウォッカ", "トニックウォーター", "ライム"],
   },
   {
     name: "スクリュードライバー",
-    description: "シンプルで親しみやすい",
+    description: "カジュアルでシンプルな装いに秘められた洗練された美しい心",
     ingredients: ["ウォッカ", "オレンジジュース"],
   },
   {
     name: "ウォッカソーダ",
-    description: "純粋さと爽快感を楽しむ",
+    description: "まるでクリスタルのような透明感と心に響く爽快な余韻",
     ingredients: ["ウォッカ", "ソーダ", "ライム"],
   },
   {
     name: "モスコミュール",
-    description: "伝統的なウォッカベース",
+    description: "ロシア・モスクワの銅製マグが奏でる伝統的で温かな響き",
     ingredients: ["ウォッカ", "ジンジャービア", "ライム"],
   },
   {
     name: "スプリッツァー",
-    description: "軽やかなワインカクテル",
+    description: "白い花びらのように軽やかで優雅な春の午後のワインの調べ",
     ingredients: ["白ワイン", "ソーダ"],
   },
   {
     name: "スプリッツァー・ルージュ",
-    description: "色鮮やかで上品なワイン",
+    description: "深紅のベルベットに包まれた上品で贅沢な秋の午後のひととき",
     ingredients: ["赤ワイン", "ソーダ"],
   },
 ];
@@ -179,52 +213,52 @@ const alcoholicCocktails = [
 const nonAlcoholicCocktails = [
   {
     name: "シャーリーテンプル",
-    description: "甘酸っぱく華やかな定番",
+    description: "少女時代の美しい夢と希望を込めた甘くて華やかな調べ",
     ingredients: ["ジンジャーエール", "グレナデンシロップ", "チェリー"],
   },
   {
     name: "サラトガクーラー",
-    description: "ライムとジンジャーエール",
+    description: "爽やかな初夏のさっぱりとした風とジンジャーが織りなす涼やかな一時",
     ingredients: ["ジンジャーエール", "ライムジュース", "ライム"],
   },
   {
     name: "サマーデライト",
-    description: "夏の柑橘系フルーツミックス",
+    description: "夏の燦けつく太陽が育んだ柑橘フルーツたちの美しく爽やかな協奏曲",
     ingredients: ["オレンジジュース", "グレープフルーツジュース", "ソーダ"],
   },
   {
     name: "ホワイトサングリア",
-    description: "上品で爽やかなフルーツ",
+    description: "白く美しいブドウが静かに奏でる気品に満ちた自然の歌声",
     ingredients: ["白ぶどうジュース", "フルーツ", "ソーダ"],
   },
   {
     name: "サングリア",
-    description: "濃厚で贅沢なフルーツ味",
+    description: "深い紅色の美しいブドウに込められた大地からの豊かな恵み",
     ingredients: ["赤ぶどうジュース", "フルーツ", "ソーダ"],
   },
   {
     name: "トロピカルフルーツソーダ",
-    description: "南国気分のエキゾチック",
+    description: "常夏の美しい南国楽園が呼び起こす甘美で懐かしい記憶",
     ingredients: ["トロピカルフルーツジュース", "ソーダ"],
   },
   {
     name: "トロピカルフルーツオレンジ",
-    description: "贅沢なフルーツミックス",
+    description: "南国の色とりどりのトロピカルフルーツたちが織りなす豪華絢爛な饗宴",
     ingredients: ["トロピカルフルーツジュース", "オレンジジュース"],
   },
   {
     name: "トロピカルフルーツジンジャー",
-    description: "スパイシーなジンジャー",
+    description: "南国の美しいフルーツの恵みにジンジャーが加える刺激的な魔法",
     ingredients: ["トロピカルフルーツジュース", "ジンジャーエール"],
   },
   {
     name: "パッションフルーツソーダ",
-    description: "情熱的で爽快な組み合わせ",
+    description: "パッションフルーツの燃えるような情熱と泡の心地よい軽やかさ",
     ingredients: ["パッションフルーツジュース", "ソーダ"],
   },
   {
     name: "グリーンアップルソーダ",
-    description: "青りんごの爽やかな酸味",
+    description: "青い空のような美しい透明感と初恋を思わせる甘酸っぱさ",
     ingredients: ["グリーンアップルジュース", "ソーダ"],
   },
 ];
@@ -246,11 +280,19 @@ function createCocktailItem(cocktail, index, isNonAlcoholic = false) {
         </div>
         <div class="cocktail-ingredients" id="ingredients-${index}">
             <div class="ingredients-title">材料</div>
-            <ul class="ingredients-list">
+            <div class="ingredients-visual">
                 ${cocktail.ingredients
-                  .map((ingredient) => `<li>${ingredient}</li>`)
+                  .map((ingredient, idx) => `
+                    <div class="ingredient-item">
+                        <div class="ingredient-icon">
+                            <img src="${getIngredientIcon(ingredient)}" alt="${ingredient}" />
+                        </div>
+                        <div class="ingredient-name">${ingredient}</div>
+                    </div>
+                    ${idx < cocktail.ingredients.length - 1 ? '<div class="plus-symbol">+</div>' : ''}
+                  `)
                   .join("")}
-            </ul>
+            </div>
         </div>
         <div class="geometric-accent"></div>
     `;
