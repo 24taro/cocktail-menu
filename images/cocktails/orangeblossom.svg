@@ -1,0 +1,39 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="orange-blossom-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:0.8" />
+        </linearGradient>
+        <linearGradient id="orange-blossom-liquid" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#ffcc80;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <path d="M20 25 L44 25 L38 50 L26 50 Z" fill="url(#orange-blossom-glass)" stroke="#90a4ae" stroke-width="1.5" opacity="0.8"/>
+    <line x1="32" y1="50" x2="32" y2="58" stroke="#90a4ae" stroke-width="3"/>
+    <ellipse cx="32" cy="58" rx="6" ry="1.5" fill="#90a4ae"/>
+    <path d="M21 26 L43 26 L37 48 L27 48 Z" fill="url(#orange-blossom-liquid)"/>
+    <circle cx="32" cy="35" r="4" fill="#ffcc80" opacity="0.4"/>
+    
+    <!-- オレンジの房 -->
+    <path d="M29 33 L32 35 L35 33" stroke="#e65100" stroke-width="0.8" fill="none"/>
+    <path d="M29 37 L32 35 L35 37" stroke="#e65100" stroke-width="0.8" fill="none"/>
+    <path d="M30 35 L34 35" stroke="#e65100" stroke-width="0.8" fill="none"/>
+    
+    <!-- オレンジの皮 -->
+    <ellipse cx="32" cy="35" rx="5" ry="5" fill="none" stroke="#ff6f00" stroke-width="1.5" opacity="0.8"/>
+    
+    <!-- 氷 -->
+    <rect x="25" y="28" width="2.5" height="2.5" fill="#ffffff" opacity="0.6" rx="0.3"/>
+    <rect x="36" y="32" width="3" height="3" fill="#ffffff" opacity="0.7" rx="0.3"/>
+    <rect x="28" y="42" width="2.5" height="2.5" fill="#ffffff" opacity="0.6" rx="0.3"/>
+    
+    <!-- 小さな泡 -->
+    <circle cx="30" cy="30" r="0.6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="38" cy="38" r="0.5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="34" cy="45" r="0.7" fill="#ffffff" opacity="0.4"/>
+    
+    <!-- グラスの輝き -->
+    <path d="M22 26 L24 26 L30 48 L28 48 Z" fill="#ffffff" opacity="0.3"/>
+</svg>

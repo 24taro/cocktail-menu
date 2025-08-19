@@ -1,0 +1,20 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="cassissoda-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:0.8" />
+        </linearGradient>
+        <linearGradient id="cassissoda-liquid" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f3e5f5;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#9c27b0;stop-opacity:0.9" />
+        </linearGradient>
+    </defs>
+    <rect x="24" y="15" width="16" height="40" rx="2" fill="url(#cassissoda-glass)" stroke="#90a4ae" stroke-width="1.5" opacity="0.8"/>
+    <rect x="25" y="25" width="14" height="28" rx="1" fill="url(#cassissoda-liquid)"/>
+    <circle cx="28" cy="30" r="0.8" fill="#ffffff" opacity="0.7"/>
+    <circle cx="33" cy="28" r="0.6" fill="#ffffff" opacity="0.6"/>
+    <circle cx="36" cy="33" r="0.7" fill="#ffffff" opacity="0.8"/>
+    <circle cx="30" cy="38" r="0.5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="34" cy="42" r="0.6" fill="#ffffff" opacity="0.7"/>
+    <rect x="26" y="16" width="1" height="35" fill="#ffffff" opacity="0.4" rx="0.5"/>
+</svg>

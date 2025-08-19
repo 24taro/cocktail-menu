@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #5c4a3a;
+  background: #faf9f7;
+  min-height: 100vh;
+}
+
+.geometric-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 50%, #f5f3f0 100%);
+}
+
+.geometric-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: polygon(0% 0%, 100% 0%, 85% 100%, 0% 80%) no-repeat,
+    polygon(15% 20%, 45% 0%, 100% 30%, 70% 100%) no-repeat;
+  background-color: transparent;
+  background-image: linear-gradient(
+      135deg,
+      rgba(212, 165, 116, 0.05) 0%,
+      transparent 50%
+    ),
+    linear-gradient(45deg, rgba(201, 168, 118, 0.03) 0%, transparent 50%);
+  clip-path: polygon(0 0, 30% 0, 20% 100%, 0 100%),
+    polygon(70% 0, 100% 0, 100% 100%, 80% 100%);
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 15px 40px rgba(92, 74, 58, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #b48e5f 0%, #a08060 50%, #b48e5f 100%);
+  opacity: 0.7;
+}
+
+.header {
+  background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 30%, #f5f3f0 100%);
+  color: #4a3c2a;
+  padding: 50px 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(180, 142, 95, 0.15);
+  border-bottom: 1px solid rgba(180, 142, 95, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(180, 142, 95, 0.1);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(180, 142, 95, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(160, 128, 96, 0.06) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 30%,
+      rgba(180, 142, 95, 0.02) 50%,
+      transparent 70%
+    );
+}
+
+.header::after {
+  content: "◆ ◆ ◆";
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(180, 142, 95, 0.2);
+  font-size: 0.8rem;
+  font-family: serif;
+  letter-spacing: 8px;
+}
+
+.cafe-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b48e5f;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4a3c2a;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(74, 60, 42, 0.1);
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: #6d5a47;
+  font-weight: 300;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.header p::before {
+  content: "⬥ ⬥ ⬥";
+  display: block;
+  text-align: center;
+  color: rgba(180, 142, 95, 0.2);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 8px;
+}
+
+.menu-section {
+  padding: 30px 20px;
+  background: #ffffff;
+}
+
+.category-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #5c4a3a;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.category-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4a574, transparent);
+  margin: 15px auto;
+}
+
+.category-title .count {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #8b7355;
+}
+
+.cocktail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 80px;
+}
+
+.cocktail-item {
+  background: #ffffff;
+  border-left: 4px solid transparent;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid #f5f3f0;
+}
+
+.cocktail-item:hover {
+  border-left-color: #d4a574;
+  background: #faf9f7;
+  transform: translateX(8px);
+}
+
+.cocktail-item:last-child {
+  border-bottom: none;
+}
+
+.cocktail-header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 15px;
+}
+
+.cocktail-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+}
+
+.cocktail-icon svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(212, 165, 116, 0.2));
+}
+
+.cocktail-info {
+  flex: 1;
+}
+
+.cocktail-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5c4a3a;
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+}
+
+.cocktail-description {
+  font-size: 0.9rem;
+  color: #8b7355;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 450px;
+}
+
+.cocktail-ingredients {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #f8f6f3;
+  margin: 0 20px;
+  border-radius: 8px;
+}
+
+.cocktail-ingredients.show {
+  max-height: 200px;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.ingredients-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d4a574;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ingredients-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ingredients-list li {
+  background: rgba(212, 165, 116, 0.1);
+  color: #5c4a3a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.non-alcoholic {
+  position: relative;
+}
+
+.non-alcoholic::before {
+  content: "Non-Alcoholic";
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c9a876;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.non-alcoholic .cocktail-item:hover {
+  border-left-color: #c9a876;
+}
+
+.non-alcoholic .category-title {
+  color: #8b7355;
+  margin-top: 50px;
+}
+
+.footer {
+  background: linear-gradient(135deg, #5c4a3a 0%, #8b7355 100%);
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 30px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.geometric-accent {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(212, 165, 116, 0.1);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.cocktail-item:hover .geometric-accent {
+  background: rgba(212, 165, 116, 0.3);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@media (max-width: 400px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .cocktail-header {
+    gap: 12px;
+  }
+
+  .cocktail-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .cocktail-description {
+    font-size: 0.85rem;
+  }
+}

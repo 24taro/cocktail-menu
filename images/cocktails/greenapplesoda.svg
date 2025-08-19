@@ -1,0 +1,22 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="greenapplesoda-liquid" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f1f8e9;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#8bc34a;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect x="24" y="15" width="16" height="40" rx="2" fill="#f8f9fa" stroke="#90a4ae" stroke-width="1.5" opacity="0.8"/>
+    <rect x="25" y="25" width="14" height="28" rx="1" fill="url(#greenapplesoda-liquid)"/>
+    <!-- グリーンアップル -->
+    <circle cx="32" cy="36" r="4" fill="#8bc34a" opacity="0.8"/>
+    <circle cx="32" cy="36" r="3" fill="#aed581" opacity="0.5"/>
+    <!-- りんごの茎 -->
+    <rect x="31.5" y="30" width="1" height="3" fill="#795548"/>
+    <ellipse cx="32" cy="29" rx="1.5" ry="0.8" fill="#4caf50"/>
+    <!-- 泡 -->
+    <circle cx="28" cy="30" r="0.7" fill="#ffffff" opacity="0.8"/>
+    <circle cx="36" cy="33" r="0.6" fill="#ffffff" opacity="0.7"/>
+    <circle cx="30" cy="42" r="0.8" fill="#ffffff" opacity="0.6"/>
+    <circle cx="34" cy="45" r="0.5" fill="#ffffff" opacity="0.7"/>
+    <rect x="26" y="16" width="1" height="35" fill="#ffffff" opacity="0.4" rx="0.5"/>
+</svg>
