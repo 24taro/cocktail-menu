@@ -46,7 +46,7 @@ function getCocktailIcon(cocktailName) {
   if (name.includes("ジンバック")) return "images/cocktails/ginbuck.svg";
   if (name.includes("オレンジブロッサム"))
     return "images/cocktails/orangeblossom.svg";
-  if (name.includes("ブルドッグハイボール"))
+  if (name.includes("ブルドックハイボール"))
     return "images/cocktails/bulldoghighball.svg";
   if (name.includes("カンパリオレンジ"))
     return "images/cocktails/campariorange.svg";
@@ -119,7 +119,7 @@ const alcoholicCocktails = [
     ingredients: ["ジン", "オレンジジュース"],
   },
   {
-    name: "ブルドッグハイボール",
+    name: "ブルドックハイボール",
     description: "クリアなウォッカの力強さとほろ苦いグレープフルーツの魅惑的な誘惑",
     ingredients: ["ウォッカ", "グレープフルーツジュース"],
   },
