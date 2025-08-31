@@ -6,33 +6,45 @@ function createSvgIcon(type) {
 // Function to get ingredient icon path
 function getIngredientIcon(ingredientName) {
   const name = ingredientName.toLowerCase();
-  
+
   // Map ingredient names to image files
   if (name.includes("ウォッカ")) return "images/ingredients/vodka.svg";
-  if (name.includes("ジン") && !name.includes("ジンジャー")) return "images/ingredients/gin.svg";
+  if (name.includes("ジン") && !name.includes("ジンジャ")) return "images/ingredients/gin.svg";
   if (name.includes("カンパリ")) return "images/ingredients/campari.svg";
   if (name.includes("オレンジジュース")) return "images/ingredients/orange-juice.svg";
   if (name.includes("カシスリキュール")) return "images/ingredients/cassis-liqueur.svg";
   if (name.includes("トニックウォーター")) return "images/ingredients/tonic-water.svg";
   if (name.includes("ソーダ")) return "images/ingredients/soda.svg";
   if (name.includes("ライムジュース")) return "images/ingredients/lime-juice.svg";
+  if (name.includes("ライムシロップ")) return "images/ingredients/lime-syrup.svg";
   if (name.includes("ライム")) return "images/ingredients/lime.svg";
   if (name.includes("レモン")) return "images/ingredients/lemon.svg";
   if (name.includes("チェリー")) return "images/ingredients/cherry.svg";
   if (name.includes("グレープフルーツジュース")) return "images/ingredients/grapefruit-juice.svg";
   if (name.includes("ジンジャービア")) return "images/ingredients/ginger-beer.svg";
-  if (name.includes("ジンジャーエール")) return "images/ingredients/ginger-ale.svg";
+  if (name.includes("ジンジャーエール") || name.includes("ジンジャエール"))
+    return "images/ingredients/ginger-ale.svg";
   if (name.includes("白ワイン")) return "images/ingredients/white-wine.svg";
   if (name.includes("赤ワイン")) return "images/ingredients/red-wine.svg";
-  if (name.includes("グレナデンシロップ")) return "images/ingredients/grenadine-syrup.svg";
+  if (name.includes("グレナデンシロップ") || name.includes("グレナデン"))
+    return "images/ingredients/grenadine-syrup.svg";
   if (name.includes("ウーロン茶")) return "images/ingredients/oolong-tea.svg";
-  if (name.includes("白ぶどうジュース")) return "images/ingredients/white-grape-juice.svg";
-  if (name.includes("赤ぶどうジュース")) return "images/ingredients/red-grape-juice.svg";
-  if (name.includes("トロピカルフルーツジュース")) return "images/ingredients/tropical-fruit-juice.svg";
-  if (name.includes("パッションフルーツジュース")) return "images/ingredients/passion-fruit-juice.svg";
-  if (name.includes("グリーンアップルジュース")) return "images/ingredients/green-apple-juice.svg";
+  if (name.includes("白ぶどうジュース") || name.includes("白ブドウジュース"))
+    return "images/ingredients/white-grape-juice.svg";
+  if (name.includes("白ぶどうシロップ") || name.includes("白ブドウシロップ"))
+    return "images/ingredients/white-grape-syrup.svg";
+  if (name.includes("赤ぶどうジュース") || name.includes("赤ブドウジュース"))
+    return "images/ingredients/red-grape-juice.svg";
+  if (name.includes("トロピカルフルーツジュース"))
+    return "images/ingredients/tropical-fruit-juice.svg";
+  if (name.includes("パッションフルーツジュース"))
+    return "images/ingredients/passion-fruit-juice.svg";
+  if (name.includes("グリーンアップルジュース"))
+    return "images/ingredients/green-apple-juice.svg";
+  if (name.includes("サングリアシロップ")) return "images/ingredients/sangria-syrup.svg";
+  if (name.includes("ライチシロップ")) return "images/ingredients/lychee-syrup.svg";
   if (name.includes("フルーツ")) return "images/ingredients/fruits.svg";
-  
+
   // Default ingredient icon (can be a generic bottle or glass)
   return "images/ingredients/soda.svg";
 }
@@ -111,7 +123,7 @@ const alcoholicCocktails = [
   {
     name: "ジンバック",
     description: "ジンジャーの繊細なスパイスが優雅に踊る洗練されたハーモニー",
-    ingredients: ["ジン", "ジンジャーエール", "レモン"],
+    ingredients: ["ジン", "ジンジャエール"],
   },
   {
     name: "オレンジブロッサム",
@@ -181,7 +193,7 @@ const alcoholicCocktails = [
   {
     name: "ウォッカトニック",
     description: "美しいクリスタルのように透明な魂に宿る純粋なエレガンス",
-    ingredients: ["ウォッカ", "トニックウォーター", "ライム"],
+    ingredients: ["ウォッカ", "トニックウォーター"],
   },
   {
     name: "スクリュードライバー",
@@ -191,12 +203,12 @@ const alcoholicCocktails = [
   {
     name: "ウォッカソーダ",
     description: "まるでクリスタルのような透明感と心に響く爽快な余韻",
-    ingredients: ["ウォッカ", "ソーダ", "ライム"],
+    ingredients: ["ウォッカ", "ソーダ"],
   },
   {
     name: "モスコミュール",
     description: "ロシア・モスクワの銅製マグが奏でる伝統的で温かな響き",
-    ingredients: ["ウォッカ", "ジンジャービア", "ライム"],
+    ingredients: ["ウォッカ", "ジンジャエール"],
   },
   {
     name: "スプリッツァー",
@@ -214,42 +226,42 @@ const nonAlcoholicCocktails = [
   {
     name: "シャーリーテンプル",
     description: "少女時代の美しい夢と希望を込めた甘くて華やかな調べ",
-    ingredients: ["ジンジャーエール", "グレナデンシロップ", "チェリー"],
+    ingredients: ["ジンジャエール", "グレナデン"],
   },
   {
     name: "サラトガクーラー",
     description: "爽やかな初夏のさっぱりとした風とジンジャーが織りなす涼やかなひととき",
-    ingredients: ["ジンジャーエール", "ライムジュース", "ライム"],
+    ingredients: ["ジンジャエール", "ライムジュース"],
   },
   {
     name: "サマーディライト",
     description: "夏の照りつける太陽が育んだ柑橘フルーツたちの美しく爽やかな協奏曲",
-    ingredients: ["オレンジジュース", "グレープフルーツジュース", "ソーダ"],
+    ingredients: ["ライムシロップ", "グレナデン", "ソーダ"],
   },
   {
     name: "ホワイトサングリア",
     description: "白く美しいブドウが静かに奏でる気品に満ちた自然の歌声",
-    ingredients: ["白ぶどうジュース", "フルーツ", "ソーダ"],
+    ingredients: ["白ブドウシロップ", "ソーダ"],
   },
   {
     name: "サングリア",
     description: "深い紅色の美しいブドウに込められた大地からの豊かな恵み",
-    ingredients: ["赤ぶどうジュース", "フルーツ", "ソーダ"],
+    ingredients: ["サングリアシロップ", "ソーダ"],
   },
   {
     name: "トロピカルフルーツソーダ",
     description: "常夏の美しい南国楽園が呼び起こす甘美で懐かしい記憶",
-    ingredients: ["トロピカルフルーツジュース", "ソーダ"],
+    ingredients: ["ライチシロップ", "ソーダ"],
   },
   {
     name: "トロピカルフルーツオレンジ",
     description: "南国の色とりどりのトロピカルフルーツたちが織りなす豪華絢爛な饗宴",
-    ingredients: ["トロピカルフルーツジュース", "オレンジジュース"],
+    ingredients: ["ライチシロップ", "オレンジジュース"],
   },
   {
     name: "トロピカルフルーツジンジャー",
     description: "南国の美しいフルーツの恵みにジンジャーが加える刺激的な魔法",
-    ingredients: ["トロピカルフルーツジュース", "ジンジャーエール"],
+    ingredients: ["ライチシロップ", "ジンジャエール"],
   },
   {
     name: "パッションフルーツソーダ",
