@@ -16,7 +16,7 @@ function getIngredientIcon(ingredientName) {
   if (name.includes("トニックウォーター")) return "images/ingredients/tonic-water.svg";
   if (name.includes("ソーダ")) return "images/ingredients/soda.svg";
   if (name.includes("ライムジュース")) return "images/ingredients/lime-juice.svg";
-  if (name.includes("ライムシロップ")) return "images/ingredients/lime-juice.svg";
+  if (name.includes("ライムシロップ")) return "images/ingredients/lime-syrup.svg";
   if (name.includes("ライム")) return "images/ingredients/lime.svg";
   if (name.includes("レモン")) return "images/ingredients/lemon.svg";
   if (name.includes("チェリー")) return "images/ingredients/cherry.svg";
@@ -32,7 +32,7 @@ function getIngredientIcon(ingredientName) {
   if (name.includes("白ぶどうジュース") || name.includes("白ブドウジュース"))
     return "images/ingredients/white-grape-juice.svg";
   if (name.includes("白ぶどうシロップ") || name.includes("白ブドウシロップ"))
-    return "images/ingredients/white-grape-juice.svg";
+    return "images/ingredients/white-grape-syrup.svg";
   if (name.includes("赤ぶどうジュース") || name.includes("赤ブドウジュース"))
     return "images/ingredients/red-grape-juice.svg";
   if (name.includes("トロピカルフルーツジュース"))
@@ -41,8 +41,8 @@ function getIngredientIcon(ingredientName) {
     return "images/ingredients/passion-fruit-juice.svg";
   if (name.includes("グリーンアップルジュース"))
     return "images/ingredients/green-apple-juice.svg";
-  if (name.includes("サングリアシロップ")) return "images/ingredients/fruits.svg";
-  if (name.includes("ライチシロップ")) return "images/ingredients/fruits.svg";
+  if (name.includes("サングリアシロップ")) return "images/ingredients/sangria-syrup.svg";
+  if (name.includes("ライチシロップ")) return "images/ingredients/lychee-syrup.svg";
   if (name.includes("フルーツ")) return "images/ingredients/fruits.svg";
 
   // Default ingredient icon (can be a generic bottle or glass)
