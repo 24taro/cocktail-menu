@@ -1,7 +1,6 @@
 {
   "mcpServers": {
     "context7": {
-      "disabled": true,
       "transport": {
         "type": "stdio",
         "command": "context7-mcp",
@@ -12,7 +11,6 @@
       }
     },
     "serena": {
-      "disabled": true,
       "transport": {
         "type": "stdio",
         "command": "serena-mcp",
@@ -24,7 +22,6 @@
       }
     },
     "playwright": {
-      "disabled": true,
       "transport": {
         "type": "stdio",
         "command": "playwright-mcp",
