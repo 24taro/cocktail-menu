@@ -1,0 +1,106 @@
+{
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "editor.codeActionsOnSave": {
+        "quickfix.biome": "explicit",
+        "source.organizeImports.biome": "explicit",
+        "source.fixAll": "explicit"
+    },
+    // ==========================================
+    // Copilot設定
+    // ==========================================
+    // === 基本設定 ===
+    "github.copilot.advanced": {
+        "authProvider": "github"
+    },
+    // Copilotの対象をすべての言語に拡大（デフォルトはMarkdownで無効化されているため有効化）
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    // #codebaseとCopilotChatに入力した場合にコードベースの検索を有効化
+    "github.copilot.chat.codesearch.enabled": true,
+    // /explain利用時にエディタのフォーカス要素をプロンプトに自動挿入
+    "github.copilot.chat.scopeSelection": true,
+    // === Agent Mode関連 ===
+    // Copilot ChatのAgentモード有効化（デフォルトでtrueだが念の為）
+    "chat.agent.enabled": true,
+    // Agent modeリクエスト数(チャット上のメッセージ数)をデフォルト（25）から増やす
+    "chat.agent.maxRequests": 999,
+    // === MCP（Model Context Protocol）関連 ===
+    // MCPサーバーをVSCode起動時に自動起動
+    "chat.mcp.autostart": "newAndOutdated",
+    // === UI/UX改善 ===
+    // タスク分割時にチャット上部に進捗を表示
+    "chat.todoListTool.enabled": true,
+    // 関連ファイルの提案を表示
+    "chat.renderRelatedFiles": true,
+    "chat.agentSessionsViewLocation": "showChatsMenu",
+    // === コンテキスト機能 ===
+    // 最近編集した指示書やコードをGitHub Copilot Chatの提案に含めるかどうか
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    // === テスト生成 ===
+    "github.copilot.chat.generateTests.codeLens": true,
+    // === インラインチャット ===
+    "inlineChat.lineEmptyHint": true,
+    // === 検索機能強化 ===
+    // ワークスペース検索を強化（デフォルト"manual"から変更）
+    "search.searchView.semanticSearchBehavior": "semanticAndText",
+    // === プロンプトファイルの追加場所 ===
+    "chat.promptFilesLocations": {
+        ".vscode/prompts": true
+    },
+    // カスタム指示ファイルの検索場所
+    "chat.instructionsFilesLocations": {
+        ".vscode/instructions": true
+    },
+    // ==========================================
+    // ⚠️ Copilot 実験的/プレビュー機能
+    // ==========================================
+    // Sonnet4などでthinking toolを有効化
+    "github.copilot.chat.agent.thinkingTool": true,
+    // インラインチャットv2の有効化
+    "inlineChat.enableV2": true,
+    // エディット機能のv2有効化
+    "chat.edits2.enabled": true,
+    // ==========================================
+    // ⚠️ セキュリティに関する注意点
+    // ==========================================
+    // MCPサーバーなどすべてのツール実行を自動承認
+    "chat.tools.autoApprove": true,
+    // 危険なコマンドを自動承認しない設定。デフォルトは以下の通りなので、必要に応じてtrueに変更する。
+    "chat.tools.terminal.autoApprove": {
+        "rmdir": false,
+        "kill": false,
+        // "curl": false,
+        // "wget": false,
+        // "eval": false,
+        // "chmod": false,
+        // "chown": false,
+        // "/^Remove-Item\\b/i": false
+    },
+    // ==========================================
+    // 📝 Copilot カスタム指示（空の配列）
+    // ==========================================
+    "github.copilot.chat.reviewSelection.instructions": [],
+    "github.copilot.chat.commitMessageGeneration.instructions": [],
+    "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [],
+}

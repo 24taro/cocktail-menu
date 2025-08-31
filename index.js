@@ -46,7 +46,7 @@ function getCocktailIcon(cocktailName) {
   if (name.includes("ジンバック")) return "images/cocktails/ginbuck.svg";
   if (name.includes("オレンジブロッサム"))
     return "images/cocktails/orangeblossom.svg";
-  if (name.includes("ブルドックハイボール"))
+  if (name.includes("ブルドッグハイボール"))
     return "images/cocktails/bulldoghighball.svg";
   if (name.includes("カンパリオレンジ"))
     return "images/cocktails/campariorange.svg";
@@ -81,7 +81,7 @@ function getCocktailIcon(cocktailName) {
     return "images/cocktails/shirleytemple.svg";
   if (name.includes("サラトガクーラー"))
     return "images/cocktails/saratogacooler.svg";
-  if (name.includes("サマーデライト"))
+  if (name.includes("サマーディライト"))
     return "images/cocktails/summerdelight.svg";
   if (name.includes("ホワイトサングリア"))
     return "images/cocktails/whitesangria.svg";
@@ -115,17 +115,17 @@ const alcoholicCocktails = [
   },
   {
     name: "オレンジブロッサム",
-    description: "春の選しい陽だまりのように心を温める優雅な柑橘の調べ",
+    description: "春の優しい陽だまりのように心を温める優雅な柑橘の調べ",
     ingredients: ["ジン", "オレンジジュース"],
   },
   {
-    name: "ブルドックハイボール",
-    description: "クリアなウォッカの力強さと苦甘いグレフルの魅惑的な誘惑",
+    name: "ブルドッグハイボール",
+    description: "クリアなウォッカの力強さとほろ苦いグレープフルーツの魅惑的な誘惑",
     ingredients: ["ウォッカ", "グレープフルーツジュース"],
   },
   {
     name: "カンパリオレンジ",
-    description: "地中海の陣しい陽光が織りなすビターとオレンジの絶妙なバランス",
+    description: "地中海の眩しい陽光が織りなすビターとオレンジの絶妙なバランス",
     ingredients: ["カンパリ", "オレンジジュース"],
   },
   {
@@ -155,7 +155,7 @@ const alcoholicCocktails = [
   },
   {
     name: "カシスグレープフルーツ",
-    description: "甘美なカシスの誘惑とグレフルの苦い現実が織りなす絶妙な均衡",
+    description: "甘美なカシスの誘惑とグレープフルーツのほろ苦い現実が織りなす絶妙な均衡",
     ingredients: ["カシスリキュール", "グレープフルーツジュース"],
   },
   {
@@ -218,12 +218,12 @@ const nonAlcoholicCocktails = [
   },
   {
     name: "サラトガクーラー",
-    description: "爽やかな初夏のさっぱりとした風とジンジャーが織りなす涼やかな一時",
+    description: "爽やかな初夏のさっぱりとした風とジンジャーが織りなす涼やかなひととき",
     ingredients: ["ジンジャーエール", "ライムジュース", "ライム"],
   },
   {
-    name: "サマーデライト",
-    description: "夏の燦けつく太陽が育んだ柑橘フルーツたちの美しく爽やかな協奏曲",
+    name: "サマーディライト",
+    description: "夏の照りつける太陽が育んだ柑橘フルーツたちの美しく爽やかな協奏曲",
     ingredients: ["オレンジジュース", "グレープフルーツジュース", "ソーダ"],
   },
   {
