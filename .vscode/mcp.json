@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "context7": {
+      "disabled": true,
+      "transport": {
+        "type": "stdio",
+        "command": "context7-mcp",
+        "args": [],
+        "env": {
+          "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+        }
+      }
+    },
+    "serena": {
+      "disabled": true,
+      "transport": {
+        "type": "stdio",
+        "command": "serena-mcp",
+        "args": [],
+        "env": {
+          "HEADLESS": "true",
+          "SERENA_API_KEY": "${SERENA_API_KEY}"
+        }
+      }
+    },
+    "playwright": {
+      "disabled": true,
+      "transport": {
+        "type": "stdio",
+        "command": "playwright-mcp",
+        "args": [],
+        "env": {
+          "HEADLESS": "true",
+          "BROWSER": "chromium"
+        }
+      }
+    }
+  }
+}

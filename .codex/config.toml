@@ -1,0 +1,3 @@
+[rules]
+# CLAUDE.md と instructions.md を見に行く
+paths = [".vscode/instructions/index.instructions.md"]
